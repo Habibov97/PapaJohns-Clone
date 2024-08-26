@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---- SWIPER JS ---->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>PapaJohns</title>
+  </head>
+  <body>
+
+    <!------ HEADER ------->
+
+    <header id="header">
+      <!-------------  NAVBAR TOP  ------------->
+
+      <div class="nav-top">
+        <div class="nav-left">
+          <p class="text-lg">Restoranlar</p>
+          <p class="text-lg">PapaBonus</p>
+        </div>
+        <div class="nav-right">
+          <div class="lang">
+            <ul>
+              <li>
+                <div style="display: flex">
+                  <img
+                    style="
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 50%;
+                      border: 1px solid red;
+                    "
+                    src="./img/flag_Azerbaijan.jpg"
+                    alt=" england_flag"
+                  />
+                  <a href="">Azerbaycanca</a>
+                </div>
+                <!------  LANGUAGE DROPDOWN   ------>
+                <ul class="dropdown">
+                  <li>
+                    <img
+                      style="
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        border: 1px solid red;
+                      "
+                      src="./img/england_flag.jpg"
+                      alt=" england_flag"
+                    />
+                    <a href="">English</a>
+                  </li>
+                  <li>
+                    <img
+                      style="
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        border: 1px solid red;
+                      "
+                      src="./img/russian_flag.png"
+                      alt="russian_flag"
+                    />
+                    <a href="">Russian</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="text-lg">Giris/Qeydiyyat</div>
+          <a class="text-lg" href=""
+            ><i id="bag" style="color: #000" class="fa-solid fa-cart-shopping"
+              ><span id="bagCount"></span></i
+          ></a>
+        </div>
+      </div>
+
+      <!-------------  NAVBAR MAIN  ------------->
+      <nav>
+        <div id="nav-main" class="nav-main"><!-- COMES FROM MAIN.JS  --></div>
+      </nav>
+
+      <!------------- PROMOCODE  --------------->
+
+      <div class="promocode">
+        <p class="text-xl" style="color: #333">
+          Promo kodunuz var?
+          <span class="color-green">Endirimdən istifadə edin!</span>
+        </p>
+        <input id="promocode" type="text" placeholder="Promo kodu daxil edin" />
+        <button id="promocodeButton" class="btn-ok">OK</button>
+      </div>
+
+      <div id="pizzaTypes"><!-- COMES FROM MAIN.JS  --></div>
+    </header>
+
+    <a href=""></a>
+
+    <!--------------- MAIN --------------->
+    <main>
+      <div id="popup" style="display: none"></div>
+      <div id="checkout" style="display: none">
+        <div id="checkout-popup">
+          <div class="close-checkout">
+            <p>Səbət</p>
+            <button onclick="closeCheckout()">
+              Bagla <span><i class="fa-solid fa-circle-xmark"></i></span>
+            </button>
+          </div>
+          <p class="sbt-say">
+            Səbətinizdəki məhsulların sayı: <span id="count"></span>
+          </p>
+
+          <div id="mehsullar"></div>
+
+          <div class="sifaris-gonder">
+            <button>Sifarişi göndər</button>
+            <p class="text-lg">
+              Ümumi Qiymət: <span id="overAll"></span> ₼
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="container">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./img/main-sliderPhoto1.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/main-sliderPhoto2.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/main-sliderPhoto3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/main-sliderPhoto4.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/main-sliderPhoto5.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/main-sliderPhoto6.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/main-sliderPhoto7.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/main-sliderPhoto8.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/main-sliderPhoto9.png" alt="" />
+            </div>
+          </div>
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </main>
+
+    <!--------------- FOOTER --------------->
+
+    <footer class="main-red">
+      <div class="footer-container">
+        <div class="text-sm color-white">PJA2024</div>
+        <ul class="footer-details">
+          <li class="text-sm color-white">About Us</li>
+          <li class="text-sm color-white">FAG</li>
+          <li class="text-sm color-white">Career</li>
+          <li class="text-sm color-white">Dough</li>
+          <li class="text-sm color-white">Papa Talk</li>
+          <li class="text-sm color-white">Terms and Condition</li>
+        </ul>
+        <div class="halal">
+          <img src="./img/footer-images-en-EN.png" alt="" />
+        </div>
+        <div class="icons">
+          <div><i class="fa-brands fa-facebook-f"></i></div>
+          <div><i class="fa-brands fa-twitter"></i></div>
+          <div><i class="fa-brands fa-instagram"></i></div>
+          <div><i class="fa-brands fa-linkedin"></i></div>
+        </div>
+      </div>
+    </footer>
+
+    <!---- SWIPER JS ---->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!---- SCRIPTS ---->
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

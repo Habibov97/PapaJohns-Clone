@@ -1,0 +1,742 @@
+/*------------ FONTS ------------*/
+
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic-ext,latin-ext'); */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=cyrillic-ext,latin-ext");
+
+@font-face {
+  font-family: "Open Sans Condensed";
+  src: url("../fonts/OSC/OpenSans-CondBold.woff") format("woff"),
+    url("../fonts/OSC/OpenSans-CondBold..eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/OSC/OpenSans-CondBold.ttf") format("truetype"),
+    url("../fonts/OSC/OpenSans-CondBold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Open Sans Condensed";
+  src: url("../fonts/OSC/OpenSans-CondLight.woff") format("woff"),
+    url("../fonts/OSC/OpenSans-CondLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/OSC/OpenSans-CondLight.ttf") format("truetype"),
+    url("../fonts/OSC/OpenSans-CondLight.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "HelveticaNeue Condensed";
+  src: url("../fonts/HNC/HelveticaNeue-CondensedBold.eot");
+  src: url("../fonts/HNC/HelveticaNeue-CondensedBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HNC/HelveticaNeue-CondensedBold.woff") format("woff"),
+    url("../fonts/HNC/HelveticaNeue-CondensedBold.ttf") format("truetype"),
+    url("../fonts/HNC/HelveticaNeue-CondensedBold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "HelveticaNeue Condensed";
+  src: url("../fonts/HNC/HelveticaNeue-Condensed-Thin.eot");
+  src: url("../fonts/HNC/HelveticaNeue-Condensed-Thin.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HNC/HelveticaNeue-Condensed-Thin.woff") format("woff"),
+    url("../fonts/HNC/HelveticaNeue-Condensed-Thin.ttf") format("truetype"),
+    url("../fonts/HNC/HelveticaNeue-Condensed-Thin.svg") format("svg");
+  font-weight: 100;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "HelveticaNeue Condensed";
+  src: url("../fonts/HNC/HelveticaNeue-CondensedRegular.eot");
+  src: url("../fonts/HNC/HelveticaNeue-CondensedRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HNC/HelveticaNeue-CondensedRegular.woff") format("woff"),
+    url("../fonts/HNC/HelveticaNeue-CondensedRegular.ttf") format("truetype"),
+    url("../fonts/HNC/HelveticaNeue-CondensedRegular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JISAZN";
+  src: url("../fonts/JISAZN/jaznb.eot");
+  src: url("../fonts/JISAZN/jaznb.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/JISAZN/jaznb.woff") format("woff"),
+    url("../fonts/JISAZN/jaznb.ttf") format("truetype"),
+    url("../fonts/JISAZN/jaznb.svg") format("svg");
+  font-weight: bold;
+  font-display: block;
+  font-style: normal;
+}
+
+/*------ ESSENTIAL ------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-red: #ad0f14;
+  --green: #0f9675;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*-------- BACKGROUND COLORS   --------*/
+
+.main-red {
+  background-color: var(--main-red);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+/*------------ TEXT STYLE -------------*/
+
+.text-sm-regular {
+    font: 1em "HelveticaNeue-CondensedRegular", sans-serif;;
+}
+
+.text-sm {
+  font: bold 1.15em "Open Sans Condensed", sans-serif;
+}
+
+.text-md {
+  font: bold 1.37em "Open Sans Condensed", sans-serif;
+}
+
+.text-lg {
+  font: bold 1.6em "Open Sans Condensed", sans-serif;
+}
+
+.text-xl {
+  font: bold 1.9em "Open Sans Condensed", sans-serif;
+}
+
+/*------------ COLORS ------------- */
+
+.color-red {
+    color: var(--main-red);
+}
+
+.color-black {
+    color:  #000;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.color-green {
+    color: var(--green)
+}
+
+/*--------------- BUTTONS  ----------------*/
+
+.btn, .basket .btn-addToBasket {
+  padding: 8px 15px;
+  font: bold 1.2em "Open Sans Condensed", sans-serif;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--green);
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: var(--main-red);
+}
+
+
+/*----------- NAVBAR - TOP ----------*/
+
+.nav-top {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+
+.nav-left, .nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+
+#bag {
+  position: relative;
+
+}
+
+#bag #bagCount {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background-color: var(--main-red);
+  color: #fff;
+  top: -10px;
+  left: 16px;
+  padding-top: 4px;
+  padding-left: 6px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  font: .5em 'Helvetica';
+
+}
+
+/*------- DROPDOWN MENU --------*/
+
+.ul li {
+    position: relative;
+    display: flex;
+    
+}
+
+ul li a {
+    display: block;
+    padding: 8px 10px;
+    font: bold 1.2em "Open Sans Condensed", sans-serif;
+    color: #000;
+    
+}
+
+ul li .dropdown li {
+    display: flex;
+    padding-top: 2px;
+}
+
+ul li .dropdown {
+    padding: 2px;
+    width: 170px;
+    position: absolute;
+    z-index: 15;
+    display: none;
+    text-align: left;
+    background-color: #fff;
+
+}
+
+
+ul li:hover .dropdown {
+    display: block;
+}
+
+
+
+/*----------- NAVBAR-MAIN -----------*/
+
+
+nav { 
+    background-color: var(--main-red);
+}
+
+.nav-main {
+    max-width: 1400px;
+    margin: auto;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav ul li a{
+    transition: .1s ease-in;
+}
+
+nav ul li a:hover {
+    color: var(--green);
+}
+
+.logo {
+    width: 250px;
+    height: 100px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*---------------   PROMOCODE   ---------------*/
+
+.promocode {
+    max-width: 1450px;
+    margin: 4vh auto;
+    padding: 15px 10px;
+    background-color: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.promocode input {
+    padding: 10px 18px;
+    border-radius: 5px;
+    border: 1px solid var(--green);
+    outline: none;
+}
+
+.promocode .btn-ok {
+    padding: 5px 18px;
+    border-radius: 5px;
+    border: 1px solid var(--green);
+    background-color: var(--green);
+    color: #fff;
+    font: bold 1.2em "Open Sans Condensed", sans-serif;
+    cursor: pointer;
+}
+
+
+
+/*------------------- MAIN SECTION  -------------------*/
+
+
+#container {
+    max-width: 1500px;
+    margin: 5vh auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+
+#container article {
+  width: 360px;
+  height: 420px;
+}
+
+#container article img {
+  width: 100%;
+  height: 250px;
+}
+
+#container article .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 10px 2px;
+}
+
+#container article .card-body div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+#container article .card-body p {
+  padding: 20px 0 0 0 ;
+
+}
+
+
+.categories{
+    max-width: 1450px;
+    margin: 4vh auto;
+    padding: 15px 10px;
+    background-color: #F1F1F1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 20px;
+    align-items: center;
+}
+
+
+.categories p {
+  padding: 5px 0;
+
+}
+
+.categories p a{
+  color: #333;
+
+}
+.card {
+  position: relative;
+}
+
+
+.discount {
+  position: absolute ;
+  right: 0;
+  top: 5px;
+  background-color: var(--main-red);
+  color: #eee;
+  font: 1em 'Helvetica';
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+
+
+
+/*----- SLIDER STYLE   -----*/
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  background-color: white !important; /* Default color to white */
+  width: 12px; /* Increase size */
+  height: 12px; /* Increase size */
+  border: 1px solid darkgreen; /* Optional: add border to make it visible on white background */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--green) !important; /* Active bullet color to green */
+}
+
+
+
+
+/*------------- FOOTER  -------------*/
+
+footer {
+  padding: 15px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15px;
+
+}
+
+.footer-details {
+  display: flex;
+  gap: 10px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  font-size: 1.4em;
+  color: #fff;
+}
+
+
+
+/*------ MAIN POPUP STRUCTURE  -------*/
+
+.pop {
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
+  border: 1px solid #888;
+  background-color: #fefefe;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+  transition: 5s ease-in-out;
+} 
+
+/*---- POPUP CLOSE BUTTON ----*/
+
+.pop .close {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pop .close button {
+  background-color: #fff;
+  border: none;
+  font-size: .9em;
+  cursor: pointer;
+}
+
+
+/*---- POPUP IMAGE ----*/
+
+.pop .image-pop {
+  margin: auto;
+  width: 350px;
+  padding-top: 10px;
+}
+
+.pop .image-pop img {
+  width: 100%;
+}
+
+/*---- POPUP COUNT SECTION ----*/
+
+.countSection {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.countOfpizza {
+  display: flex;
+}
+
+
+.countOfpizza .azaltBtn , .coxaltBtn{
+  width: 20px;
+  cursor: pointer;
+  background-color: green;
+  border: 1px solid green;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.countOfpizza input {
+  width: 50px;
+  padding: 10px;
+  border: 0;
+  background-color: #eee;
+  text-align: center;
+
+}
+
+
+/*---- POPUP BASKET SECTION ----*/
+
+.basket {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.none{
+  display: none;
+}
+
+
+
+
+/*-------------------   CHECKOUT POPUP   --------------------*/
+
+
+
+
+#checkout-popup{
+  width: 650px;
+  border: 1px solid #888;
+  background-color: #fefefe;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+
+}
+
+
+.close-checkout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-checkout p {
+  font: bold 2.2em 'Helvetiva Neue', sans-serif;
+}
+
+.close-checkout button {
+  background-color: #fff;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.sbt-say {
+  padding: 15px 0 0 0;
+  font: .9em 'Helvetiva Neue', sans-serif;
+}
+
+#mehsullar {
+  margin: 15px auto ;
+  padding: 0 20px;
+}
+
+/* #mehsullar-container  #mehsullar {
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+  column-gap: 20px;
+} */
+
+#mehsullar>div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mehsulunAdi div {
+  padding: 5px 0;
+}
+
+
+.sifaris-gonder {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sifaris-gonder button {
+  padding: 8px 70px;
+  font: 1.1em  'Helvetica';
+  color: #fff;
+  background-color: var(--main-red);
+  border: 0;
+  cursor: pointer;
+}
+
+/*------------- SELECT BOX FOR PIZZA SIZES --------------*/
+
+.select-container {
+  position: relative;
+  margin: 5px auto;
+  width: 250px;
+}
+
+.select-box {
+  outline: none;
+  border: none;
+  appearance: none;
+  padding: 6px 30px 6px 15px;
+  width: 100%;
+  color: #fff;
+  background-color: var(--main-red);
+  font: 1em 'Poppins', sans-serif;
+}
+
+.select-container .icon-container {
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.icon-container{
+  font-size: 1.4em;
+  color: var(--green);
+}
+
+
+/*------------------- MEDIA QUERIES   --------------------*/
+
+
+@media only screen and (max-width: 768px) {
+
+
+/*---------- NAVBAR ELEMEMENTS ----------*/
+
+.nav-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 80px;
+}
+
+
+/*----------- PROMOCODE ELEMENTS  -----------*/
+
+.promocode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.promocode p {
+    display: none;
+}
+
+
+.promocode input {
+    margin-bottom: 10px;
+}
+
+
+/*---------------   FOOTER SECTION   ----------------*/
+
+.footer-container {
+  flex-wrap: wrap;
+
+}
+
+.footer-details {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+}
